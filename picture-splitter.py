@@ -44,26 +44,20 @@ startTime = datetime.now()
 
 Image.MAX_IMAGE_PIXELS = None
 
-## SCANNER_WIDTH_HQ = 10192
-## SCANNER_HEIGHT_HQ = 14039
-
 COEFFICIENT_X_HQ = 0.548175
 COEFFICIENT_Y_HQ = 0.513569
 
-PICTURE_WIDTH = 2345
+PICTURE_WIDTH = 2340
 PICTURE_HEIGHT = 3455
 
 HQ_RESOLUTION = (10192, 14039)
 LIGHTWEIGHT_RESOLUTION = (5096,7019)
-#LIGHTWEIGHT_RESOLUTION = (5096,701)
 
 DIRECTORY_INPUT='/home/luciana/Documentos/luciana/utn/picture-splitter/fotos-cropper/todas/*.png'
 DIRECTORY_OUTPUT='/home/luciana/Documentos/luciana/utn/picture-splitter/fotos-cropper/test/'
 
 i=0
 log_start_end("Begins process for directory "+ DIRECTORY_INPUT)
-
-#loop_time = 0
 
 for image_file in glob.glob(DIRECTORY_INPUT):
 
