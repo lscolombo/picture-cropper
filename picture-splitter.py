@@ -49,6 +49,7 @@ def check_if_directories_exist():
 
 try:
     last_filename_index = int(input(Fore.BLUE + Style.BRIGHT + "Enter last filename index (i.e. 0001): " + Style.RESET_ALL))
+    last_filename_index+=1
 except ValueError:
     log_error('-','-',"You must enter a number")
     sys.exit(0)
@@ -62,8 +63,8 @@ Image.MAX_IMAGE_PIXELS = None
 COEFFICIENT_X_HQ = 0.548175
 COEFFICIENT_Y_HQ = 0.513569
 
-PICTURE_WIDTH = 2340
-PICTURE_HEIGHT = 3455
+PICTURE_WIDTH = 2330
+PICTURE_HEIGHT = 3430
 
 HQ_RESOLUTION = (10192, 14039)
 LIGHTWEIGHT_RESOLUTION = (5096,7019)
@@ -78,6 +79,7 @@ i=0
 log_start_end("Begins process for directory "+ DIRECTORY_INPUT)
 files = glob.glob(DIRECTORY_INPUT)
 dir_length = len(files)
+
 for image_file in files:
     counter=1
 
@@ -106,7 +108,6 @@ for image_file in files:
             continue
 
         #The crop rectangle, as a (left, upper, right, lower)-tuple.
-        last_filename_index+=1
         pic_1 = scanned_image.crop((0,0,PICTURE_WIDTH,PICTURE_HEIGHT))
         
         saved_as = save_picture(pic_1, last_filename_index)
