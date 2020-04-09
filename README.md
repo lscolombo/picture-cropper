@@ -19,7 +19,7 @@ https://github.com/lscolombo/picture-cropper
 ```
 2. Install the required dependencies:
 ```
-pip install -r /path/to/requirements.txt
+pip install -r requirements.txt
 ```
 
 
