@@ -140,6 +140,6 @@ for image_file in files:
     except Exception as e:
         log_error(i,filename_w_extension,str(e))
 
-log_start_end("End of process. " + str(last_filename_index-start_filename_index) + " pictures were created in output directory: " + DIRECTORY_OUTPUT )
+log_start_end("End of process: " + str(last_filename_index-start_filename_index) + " pictures were created in output directory: " + DIRECTORY_OUTPUT )
 log_start_end("Total time: "+str(datetime.now() - startTime))
 log_start_end("*********** LAST FILENAME INDEX: " + str(last_filename_index) + " ***********")
